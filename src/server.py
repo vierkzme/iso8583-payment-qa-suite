@@ -3,6 +3,12 @@ Lightweight HTTP Server for ISO 8583 Payment Switching Simulator.
 Provides RESTful JSON endpoints wrapping ISO 8583 message processing.
 """
 
+import os
+import sys
+
+# Ensure repository root is on sys.path when executed directly
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import json
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from typing import Optional
